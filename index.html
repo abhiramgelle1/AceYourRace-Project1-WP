@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Car Racing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-game">Play</a></li>
+            <li><a href="#" id="nav-rules">Rules</a></li>
+        </ul>
+    </nav>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <h1>Ace Your Speed</h1>
+        <p>A Car Racing You Can’t Get Rid Of</p>
+        <button id="start-btn">Start Game</button>
+    </div>
+    
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-container">
+            <div id="track">
+                <div id="player-car"></div>
+                <div class="obstacle"></div>
+                <div class="obstacle second"></div>
+            </div>
+            <div id="score-container">
+                <span id="score">Score: 0</span>
+            </div>
+        </div>
+        <div id="speed-indicator">Speed: 100 km/h</div>
+    </div>
+    
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+        <h2>Game Over</h2>
+        <p>Your Score: <span id="final-score">0</span></p>
+        <button id="restart-btn">Restart</button>
+    </div>
+
+    <!-- Rules Screen -->
+    <div id="rules-screen" class="screen hidden">
+        <h2>Game Rules</h2>
+        <ul>
+            <li>Avoid hitting obstacles</li>
+            <li>Score increases with time</li>
+            <li>Game ends when you collide</li>
+        </ul>
+        <button id="back-btn">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
