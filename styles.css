@@ -23,8 +23,12 @@ nav {
     padding: 15px 10px;
     text-align: center;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 nav label {
@@ -40,15 +44,26 @@ nav label:hover {
     color: white;
 }
 
+#score-container {
+    background: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: yellow;
+}
+
 /* Screens */
 .screen {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 50px;
 }
 
 /* Screen Visibility */
@@ -87,13 +102,18 @@ nav label:hover {
     width: 100%;
     height: 90vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Background Track */
 #track {
-    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    z-index: -1;
     animation: trackMove 3s linear infinite;
 }
 
@@ -102,7 +122,7 @@ nav label:hover {
     position: absolute;
     bottom: 10%;
     left: 50%;
-    width: 80px;
+    width: 100px;
     height: 120px;
     transform: translateX(-50%);
 }
@@ -123,19 +143,20 @@ nav label:hover {
 
 /* Score & Speed Indicator */
 #score-container {
-    position: absolute;
+    position: fixed;
+    right: 20px;
     top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: black;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 20px;
     font-weight: bold;
+    color: yellow;
 }
 
 #speed-indicator {
-    margin-top: 15px;
+    position: absolute;
+    bottom: 10px;
     font-size: 20px;
     font-weight: bold;
 }
