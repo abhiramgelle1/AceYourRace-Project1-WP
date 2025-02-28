@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="radio" name="screen" id="home" checked>
+    <input type="radio" name="screen" id="game">
+    <input type="radio" name="screen" id="rules">
+    <input type="radio" name="screen" id="game-over">
+
     <nav>
-        <ul>
-            <li><a href="#" id="nav-home">Home</a></li>
-            <li><a href="#" id="nav-game">Play</a></li>
-            <li><a href="#" id="nav-rules">Rules</a></li>
-        </ul>
+        <label for="home">Home</label>
+        <label for="game">Play</label>
+        <label for="rules">Rules</label>
     </nav>
 
-    <div id="start-screen" class="screen">
+    <!-- Start Screen -->
+    <div class="screen start">
         <h1>Ace Your Speed</h1>
         <p>A car racing game, you can't get rid of only</p>
-        <button id="start-btn">Start Game</button>
+        <label for="game" class="btn">Start Game</label>
     </div>
 
-    <div id="game-screen" class="screen hidden">
+    <!-- Game Screen -->
+    <div class="screen game">
         <div class="game-container">
             <img src="track.png" id="track">
             <img src="car.png" id="player-car">
@@ -32,22 +37,25 @@
             <span id="score">Score: 0</span>
         </div>
         <div id="speed-indicator">Speed: 150 km/h</div>
+        <label for="game-over" class="btn game-over-btn">Game Over</label>
     </div>
 
-    <div id="game-over-screen" class="screen hidden">
+    <!-- Game Over Screen -->
+    <div class="screen game-over">
         <h2>Game Over</h2>
         <p>Your Score: <span id="final-score">0</span></p>
-        <button id="restart-btn">Restart</button>
+        <label for="game" class="btn">Restart</label>
     </div>
 
-    <div id="rules-screen" class="screen hidden">
+    <!-- Rules Screen -->
+    <div class="screen rules">
         <h2>Game Rules</h2>
         <ul>
             <li>Use arrow keys to move your car.</li>
             <li>Avoid hitting obstacles.</li>
             <li>Score increases the longer you survive.</li>
         </ul>
-        <button id="back-btn">Back</button>
+        <label for="home" class="btn">Back</label>
     </div>
 </body>
 </html>
